@@ -3,14 +3,14 @@ Section: graphics
 Priority: optional
 Maintainer: Aapo Rantalainen <aapo.rantalainen@gmail.com>
 XSBC-Bugtracker: mailto:aapo.rantalainen@gmail.com
-Build-Depends: debhelper (>= 5), scons (>=1.2), python-gtk2-dev, python-numpy, swig, python-support, debhelper-maemo-package-icons, liblapack-dev, libpng12-dev
+Build-Depends: debhelper (>= 5), scons (>=1.2), python-gtk2-dev, python-numpy, swig, debhelper-maemo-package-icons, liblapack-dev, libpng12-dev
 Standards-Version: 3.8.4
 Homepage: http://mypaint.intilinux.com/
 
 Package: mypaint
 Architecture: any
 Section: user/graphics
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-numpy, python-gtk2, libblas3gf, liblapack3gf, python-support (>=1.0.6maemo1), python-simplejson, python-hildon, python-osso
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-numpy, python-gtk2, libblas3, liblapack3, python-simplejson, python-hildon, python-osso
 Description: Pressure sensitive paint program
  This is a pressure sensitive paint program. It comes with a large
  brush collection including charcoal and ink to emulate real media, but the
