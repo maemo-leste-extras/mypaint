@@ -8,7 +8,7 @@ Standards-Version: 3.8.4
 Homepage: http://mypaint.intilinux.com/
 
 Package: mypaint
-Architecture: any
+Architecture: all
 Section: user/graphics
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python-numpy, python-gtk2, libblas3, liblapack3, python-simplejson, python-hildon, python-osso
 Description: Pressure sensitive paint program
