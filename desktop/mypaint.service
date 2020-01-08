@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=net.gud.mypaint
+Exec=/opt/mypaint/bin/mypaint

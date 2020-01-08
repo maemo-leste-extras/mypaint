@@ -1,0 +1,41 @@
+# mypaint brush file
+# you can edit this file and then select the brush in mypaint (again) to reload
+version 2
+opaque 1.77 | speed1 (0.000000 0.061427), (4.000000 -0.430000) | speed2 (0.000000 0.025714), (4.000000 -0.180000)
+opaque_multiply 0.0 | pressure (0.000000 0.000000), (1.000000 1.010000)
+opaque_linearize 0.0
+radius_logarithmic -0.58 | pressure (0.000000 0.000000), (1.000000 2.770000)
+hardness 0.46
+dabs_per_basic_radius 0.5
+dabs_per_actual_radius 0.5
+dabs_per_second 0.0
+radius_by_random 0.0
+speed1_slowness 0.16
+speed2_slowness 2.13
+speed1_gamma 4.0
+speed2_gamma 4.0
+offset_by_random 0.0 | pressure (0.000000 2.000000), (1.000000 -2.000000) | speed1 (0.000000 -0.217143), (4.000000 1.520000) | custom (-2.000000 -1.440000), (2.000000 1.440000)
+offset_by_speed 0.0
+offset_by_speed_slowness 1.0
+slow_tracking 2.34
+slow_tracking_per_dab 4.96
+tracking_noise 0.0
+color_h 0.0
+color_s 0.0
+color_v 0.0
+change_color_h 0.0
+change_color_l 0.0
+change_color_hsl_s 0.0
+change_color_v 0.0
+change_color_hsv_s 0.0
+smudge 0.0 | custom (-2.000000 -1.000000), (-0.677419 0.468750), (0.103226 0.833333), (1.122581 0.947917), (1.625806 0.781250), (1.877419 1.000000), (2.000000 0.479167), (2.000000 -1.000000)
+smudge_length 0.5
+eraser 0.0
+stroke_threshold 0.0
+stroke_duration_logarithmic 4.0
+stroke_holdtime 0.0
+custom_input 2.59 | pressure (0.000000 -2.073333), (1.000000 3.110000)
+custom_input_slowness 0.0
+elliptical_dab_ratio 1.0
+elliptical_dab_angle 90.0
+direction_filter 2.0

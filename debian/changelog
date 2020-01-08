@@ -1,0 +1,219 @@
+mypaint (0.9.1-maemo7) unstable; urgency=low
+
+  * Fix: File->Document Frame
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 28 Apr 2011 09:58:31 +0200
+
+mypaint (0.9.1-maemo6) unstable; urgency=low
+
+  * Fix: exporting brush set to zip-file
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Sun, 24 Apr 2011 23:03:31 +0200
+
+mypaint (0.9.1-maemo5) unstable; urgency=low
+
+  * Fix: export brush set (double click opens contex menu)
+  * Fix: brush settings -> 'more' is working
+  * Fix: In-program error messages
+  * Fix: saving png images without transparency
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Sat, 23 Apr 2011 18:59:31 +0200
+
+mypaint (0.9.1-maemo4) unstable; urgency=low
+
+  * Fix: launching from menu
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 21 Apr 2011 09:47:31 +0200
+
+mypaint (0.9.1-maemo3) unstable; urgency=low
+
+  * Fix: ghost lines.
+  * Fix: Warning during upgrade
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 21 Apr 2011 08:55:31 +0200
+
+mypaint (0.9.1-maemo2) unstable; urgency=low
+
+  * Wrapper script passes parameters
+  * Fixd python-2.5 issue (ZipFile.open is python-2.6)
+  * Preferenceswindow removed info text because of limited vertical space
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 20 Apr 2011 21:22:31 +0200
+
+mypaint (0.9.1-maemo1) unstable; urgency=low
+
+  * fixed gtk-2.12 problems
+  * working pressure mapping
+  * default: /home/user/MyDocs/MyPaint/scrap
+  * use '|' on brushselection
+  * other windows are: floating=True, hidden=True
+  * Tone's brush set
+  * Using old colorselector (not gtk.HSV).
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 20 Apr 2011 15:03:31 +0200
+
+mypaint (0.9.1-maemo0) unstable; urgency=low
+
+  * Vanilla upstream 0.9.1 -version (git e98e763708587ef374b7f83a81e985c1ae1f7afd)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 20 Apr 2011 10:07:31 +0200
+
+mypaint (0.8.2-2maemo0) unstable; urgency=low
+
+  * Bruslist is inside hildon.PannableArea (instead of gtk.Scrolling)
+  * Brush previes size is 95x95 (instead of 48x48)
+  * First start show drawWindow topmost (instead of color- and brushSelection)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Sat, 10 Jul 2010 15:33:31 +0200
+
+mypaint (0.8.2-1maemo24) unstable; urgency=low
+
+  * Default folder /home/user/MyDocs/MyPaint
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 16 Jun 2010 14:13:31 +0200
+
+mypaint (0.8.2-1maemo23) unstable; urgency=low
+
+  * New Tone's brushkit (and global pressure tuned)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 16 Jun 2010 08:26:31 +0200
+
+mypaint (0.8.2-1maemo22) unstable; urgency=low
+
+  * Version bump.
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 3 Jun 2010 20:02:31 +0200
+
+mypaint (0.8.2-1maemo21) unstable; urgency=low
+
+  * Removed 'wacom' from description
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 3 Jun 2010 11:42:31 +0200
+
+mypaint (0.8.2-1maemo20) unstable; urgency=low
+
+  * New brushkit by Tone
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 2 Jun 2010 18:26:31 +0200
+
+mypaint (0.8.2-1maemo19) unstable; urgency=low
+
+  * version bump
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Mon, 31 May 2010 13:44:31 +0200
+
+mypaint (0.8.2-1maemo18) unstable; urgency=low
+
+  * dependency fixed
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Sun, 30 May 2010 18:23:31 +0200
+
+mypaint (0.8.2-1maemo17) unstable; urgency=low
+
+  * mypaint+mypaint-data merged to single package
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Sun, 30 May 2010 17:53:31 +0200
+
+mypaint (0.8.2-1maemo16) unstable; urgency=low
+
+  * Typo in accel.
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Mon, 17 May 2010 11:36:31 +0200
+
+mypaint (0.8.2-1maemo15) unstable; urgency=low
+
+  * Added 'bug tracker' address
+  * Default keyboard shortcuts by xman
+  * Eraser mode like older versions by Tone
+  * Rotate angle is now 22,5 degrees (by Tone & CO)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Fri, 14 May 2010 10:00:31 +0200
+
+mypaint (0.8.2-1maemo14) unstable; urgency=low
+
+  * Icon for application menu fixed - reverted back
+  * Added minimum version for python-support
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 12 May 2010 18:43:31 +0200
+
+mypaint (0.8.2-1maemo13) unstable; urgency=low
+
+  * Icon for application menu fixed
+  * Added Tone's Liner (line drawing brush)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 12 May 2010 18:42:31 +0200
+
+mypaint (0.8.2-1maemo12) unstable; urgency=low
+
+  * Icon for application menu
+  * Dependencies python-osso and python-hildon added
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Tue, 11 May 2010 09:33:31 +0200
+
+mypaint (0.8.2-1maemo11) unstable; urgency=low
+
+  * layer-crash-fix.patch by Anders
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Mon, 10 May 2010 09:17:31 +0200
+
+mypaint (0.8.2-1maemo10) unstable; urgency=low
+
+  * Input method = screen
+  * postinst fix for python-numpy bug
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Sat, 8 May 2010 13:39:31 +0200
+
+mypaint (0.8.2-1maemo9) unstable; urgency=low
+
+  * Icon fix
+  * Non-working characters removed from brushselector
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Fri, 7 May 2010 15:32:31 +0200
+
+mypaint (0.8.2-1maemo8) unstable; urgency=low
+
+  * Color menu (bigger -> brighter)
+  * share/desktop/icons
+  * menu launcher
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Fri, 7 May 2010 14:22:31 +0200
+
+mypaint (0.8.2-1maemo6) unstable; urgency=low
+
+  * Open file fixed.
+  * default brush
+  * dependencies added
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 6 May 2010 11:54:31 +0200
+
+mypaint (0.8.2-1maemo5) unstable; urgency=low
+
+  * Fixing hildonizing
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Thu, 6 May 2010 02:31:31 +0200
+
+mypaint (0.8.2-1maemo4) unstable; urgency=low
+
+  * Not optifying mypaint package (only mypaint-data)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 5 May 2010 23:34:31 +0200
+
+mypaint (0.8.2-1maemo3) unstable; urgency=low
+
+  * Hildonize (with Anders' 0.7.1 patch)
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 5 May 2010 23:14:31 +0200
+
+mypaint (0.8.2-1maemo2) unstable; urgency=low
+
+  * optify whole package
+  * 'good' default global pressure
+
+ -- Aapo Rantalainen <aapo.rantalainen@gmail.com>  Wed, 5 May 2010 22:24:31 +0200
+
+mypaint (0.8.2-1maemo1) unstable; urgency=low
+
+  * Snatched from Ubuntu Lucid. Made it build in Scratchbox.
+
+ -- Anders Gudmundson <anders@gudmundson.se>  Mon, 5 May 2010 15:24:31 +0100
+

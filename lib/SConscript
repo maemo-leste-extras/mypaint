@@ -1,0 +1,22 @@
+Import('env')
+import sys
+
+# For the record: I know that scons supports swig. But it doesn't scan for #include in the generated code.
+# 
+# I have given up. Scons just can't get the dependencies right with those
+# code generators. Let's give scons a "normal" c++ project to dependency-scan.
+#if env.Execute('swig -o mypaintlib_wrap.cpp -noproxydel -python -c++ mypaintlib.i'):
+#    Exit(1)
+#env.Clean('.', 'mypaintlib_wrap.cpp')
+#env.Clean('.', 'mypaintlib.py')
+
+# python extension module
+src = 'mypaintlib_wrap.cpp'
+if sys.platform == "win32": # there 's a better way to do this 
+    module = env.LoadableModule('_mypaintlib', Split(src), SHLIBPREFIX="", SHLIBSUFFIX=".pyd")
+elif sys.platform == "darwin":
+    module = env.LoadableModule('_mypaintlib', Split(src), SHLIBPREFIX="", SHLIBSUFFIX=".so")
+else:
+    module = env.LoadableModule('_mypaintlib', Split(src), SHLIBPREFIX="")
+
+Return('module')

@@ -1,0 +1,30 @@
+#!/bin/sh
+if [ -f /usr/lib/libblas.so  ]
+then
+echo -n
+#echo libblas.so exists!
+else
+cd /usr/lib/
+ln -s libblas.so.3gf libblas.so
+fi
+
+if [ -f /usr/lib/liblapack.so  ]
+then
+echo -n
+#echo liblapack.so exists!
+else
+cd /usr/lib/
+ln -s liblapack.so.3gf.0 liblapack.so
+fi
+
+
+#Icon showing to application menu
+#/usr/sbin/dsmetool -k /usr/bin/hildon-home
+#/usr/sbin/dsmetool -t /usr/bin/hildon-home
+#doesn't work
+
+#default folder for scraps and savings
+mkdir -p /home/user/MyDocs/MyPaint
+
+exit 0
+

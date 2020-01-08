@@ -1,0 +1,96 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+PATH:=/usr/bin/dh7:/usr/bin:$(PATH)
+export PATH
+SBOX_REDIRECT_IGNORE=/usr/bin/perl
+export SBOX_REDIRECT_IGNORE
+
+PREFIX=/opt/mypaint
+
+build: build-stamp
+
+build-stamp:
+	dh_testdir
+	/usr/bin/python2.5 /opt/scons/scratchbox/tools/bin/scons
+	touch $@
+
+clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	/usr/bin/python2.5 /opt/scons/scratchbox/tools/bin/scons -c
+	rm -f options.cache .sconsign.dblite debian/*.debhelper debian/*.log
+	find . -type f -name "*.pyc" -exec rm -vf {} \;
+	find . -type f -name "*.pyo" -exec rm -vf {} \;
+	rm -f debian/mypaint.png
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	/usr/bin/python2.5 /opt/scons/scratchbox/tools/bin/scons prefix=$(PREFIX) --install-sandbox=$(CURDIR)/debian/mypaint
+	mkdir -p $(CURDIR)/debian/mypaint$(PREFIX)/share/mypaint/brushes/
+	mkdir -p $(CURDIR)/debian/mypaint$(PREFIX)/share/mypaint/backgrounds/
+	mkdir -p $(CURDIR)/debian/mypaint/$(PREFIX)/share/mypaint/desktop/icons
+	cp -r $(CURDIR)/desktop/icons $(CURDIR)/debian/mypaint/$(PREFIX)/share/mypaint/desktop/
+	find $(CURDIR)/debian/mypaint$(PREFIX)/share/mypaint/ -type d -empty -print0 | xargs -0 rm -rf
+	chmod -x $(CURDIR)/debian/mypaint$(PREFIX)/share/mypaint/gui/colorsamplerwindow.py
+
+
+	# dh_maemo_package_icons wants this
+	cp $(CURDIR)/desktop/icons/hicolor/48x48/apps/mypaint.png \
+	   $(CURDIR)/debian/
+	# maemo service and desktop files 
+	mkdir -p $(CURDIR)/debian/mypaint/usr/share/dbus-1/services/
+	mkdir -p $(CURDIR)/debian/mypaint/usr/share/applications/hildon/
+	cp $(CURDIR)/desktop/mypaint.service \
+	   $(CURDIR)/debian/mypaint/usr/share/dbus-1/services/
+	cp $(CURDIR)/desktop/mypaint.desktop \
+	   $(CURDIR)/debian/mypaint/usr/share/applications/hildon/
+
+	#Icon
+	install -d ${CURDIR}/debian/mypaint/usr/share/icons/hicolor/48x48/hildon
+	install ${CURDIR}/desktop/icons/hicolor/48x48/apps/mypaint.png     ${CURDIR}/debian/mypaint/usr/share/icons/hicolor/48x48/hildon
+
+	mkdir -p $(CURDIR)/debian/mypaint/usr/bin
+	cp $(CURDIR)/desktop/start_script.sh \
+	   $(CURDIR)/debian/mypaint/usr/bin/mypaint
+
+
+# Build architecture-independent files here.
+binary-indep: install
+# We have nothing to do by default.
+
+PATH:=/usr/bin/dh7:/usr/bin:$(PATH)
+export PATH
+SBOX_REDIRECT_IGNORE=/usr/bin/perl
+export SBOX_REDIRECT_IGNORE
+
+# Build architecture-dependent files here.
+binary-arch: install
+	dh_maemo_package_icons
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs changelog
+	dh_installdocs
+	dh_installmenu
+#	dh_pysupport
+#	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_icons
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+	dh_maemo_package_icons -r
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install
