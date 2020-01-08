@@ -72,7 +72,7 @@ export SBOX_REDIRECT_IGNORE
 
 # Build architecture-dependent files here.
 binary-arch: install
-	dh_maemo_package_icons
+	#dh_maemo_package_icons
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs changelog
@@ -90,7 +90,7 @@ binary-arch: install
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
-	dh_maemo_package_icons -r
+	#dh_maemo_package_icons -r
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install
