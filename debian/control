@@ -3,7 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: Aapo Rantalainen <aapo.rantalainen@gmail.com>
 XSBC-Bugtracker: mailto:aapo.rantalainen@gmail.com
-Build-Depends: debhelper (>= 5), scons (>=1.2), python-gtk2-dev, python-numpy, swig, debhelper-maemo-package-icons, liblapack-dev, libpng12-dev
+Build-Depends: debhelper (>= 5), scons (>=1.2), python-gtk2-dev, python-numpy, swig, liblapack-dev, libpng12-dev
 Standards-Version: 3.8.4
 Homepage: http://mypaint.intilinux.com/
 
