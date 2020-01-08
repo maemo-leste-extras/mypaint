@@ -1,3 +1,9 @@
+mypaint (0.9.2) unstable; urgency=low
+
+  * Initial Leste import
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Wed, 08 Jan 2020 02:23:09 +0100
+
 mypaint (0.9.1-maemo7) unstable; urgency=low
 
   * Fix: File->Document Frame
