@@ -13,14 +13,14 @@ build: build-stamp
 
 build-stamp:
 	dh_testdir
-	/usr/bin/python2.5 /opt/scons/scratchbox/tools/bin/scons
+	/usr/bin/python2.7 /usr/bin/scons
 	touch $@
 
 clean: 
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	/usr/bin/python2.5 /opt/scons/scratchbox/tools/bin/scons -c
+	/usr/bin/python2.7 /usr/bin/scons -c
 	rm -f options.cache .sconsign.dblite debian/*.debhelper debian/*.log
 	find . -type f -name "*.pyc" -exec rm -vf {} \;
 	find . -type f -name "*.pyo" -exec rm -vf {} \;
@@ -32,7 +32,7 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	/usr/bin/python2.5 /opt/scons/scratchbox/tools/bin/scons prefix=$(PREFIX) --install-sandbox=$(CURDIR)/debian/mypaint
+	/usr/bin/python2.7 /usr/bin/scons prefix=$(PREFIX) --install-sandbox=$(CURDIR)/debian/mypaint
 	mkdir -p $(CURDIR)/debian/mypaint$(PREFIX)/share/mypaint/brushes/
 	mkdir -p $(CURDIR)/debian/mypaint$(PREFIX)/share/mypaint/backgrounds/
 	mkdir -p $(CURDIR)/debian/mypaint/$(PREFIX)/share/mypaint/desktop/icons
